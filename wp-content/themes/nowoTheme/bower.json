@@ -1,0 +1,21 @@
+{
+  "name": "orion",
+  "version": "0.1",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  },
+  "dependencies": {
+    "fontawesome": "~4.3.0",
+    "malihu-custom-scrollbar-plugin": "3.1.3",
+    "owl.carousel": "^2.1.6"
+  }
+}

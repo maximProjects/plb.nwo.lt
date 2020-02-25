@@ -1,0 +1,12 @@
+.documents {
+  position: relative;
+  margin-top: $section-margin-top;
+  .download {
+    width: 200PX;
+    text-align: center;
+  }
+  @media only screen and (max-width: $screen-md) {
+      margin-top: 30px;
+  }
+  margin-bottom: 0px;
+}

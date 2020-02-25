@@ -1,0 +1,31 @@
+// Your custom variables should be here
+// $bootstrap-variable: value;
+
+// Import main Bootstrap styles
+@import "_variables";
+@import "~bootstrap/scss/bootstrap";
+
+@import "material-icons";
+@import "theme-variables";
+@import "theme";
+@import "theme-category";
+@import "theme-single-post";
+@import "theme-news";
+@import "theme-about-us";
+@import "theme-history";
+@import "theme-management";
+@import "theme-documents";
+@import "theme-documents-constitution";
+@import "theme-documents-chatrija";
+@import "theme-documents-seimai";
+@import "theme-documents-suvaziavimai";
+@import "theme-documents-year-repots";
+@import "theme-documents-newsletters";
+@import "theme-documents-archyve";
+@import "theme-employers-commision";
+@import "theme-project";
+@import "theme-contacts";
+@import "thene-contacts-communities";
+@import "theme-map";
+@import "theme-calendar";
+@import "theme-events";

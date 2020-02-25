@@ -1,0 +1,56 @@
+.documents-constitution {
+  &.suvaziavimai {
+    padding-bottom: 120px;
+    @media only screen and (max-width: $screen-md) {
+      padding-bottom: 35px;
+    }
+    h1 {
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-20;
+      }
+    }
+    .descr {
+      font-size: $font-size-24;
+      color: $text-color;
+      font-weight: $font-bold;
+      margin-bottom: 40px;
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-18;
+        font-weight: $font-medium;
+      }
+      p {
+        font-size: inherit;
+        @media only screen and (max-width: $screen-md) {
+          margin-bottom: 0px;
+        }
+      }
+      &::after {
+        display: none;
+      }
+    }
+    .block {
+      margin-bottom: 30px;
+      font-size: $font-size-20;
+      a {
+        display: block;
+        margin-bottom: 20px;
+        color: $text-color;
+        font-weight: $font-medium;
+        font-size: $font-size-42;
+        @media only screen and (max-width: $screen-md) {
+          margin-bottom: 0px;
+        }
+
+      }
+      &:hover {
+        font-weight: bold;
+        a {
+          text-decoration: underline;
+          color: $background-aktive;
+          font-weight: $font-medium;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,208 @@
+.contacts {
+  h1 {
+    padding-bottom: 0;
+    &:after {
+      background-color: $text-color;
+    }
+  }
+  .contacts-content {
+
+    width: 1410px;
+    margin: 185px auto 0 auto;
+    @media only screen and (max-width: $screen-md) {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .row {
+      margin-bottom: 190px;
+      @media only screen and (max-width: $screen-md) {
+        margin-bottom: 50px;
+        .email-form {
+          display: none;
+        }
+        &.active {
+          .email-form {
+            &.mobile {
+              display: block;
+              position: fixed;
+              margin-top: 0px;
+              top: 0px;
+              z-index: 99999;
+              left: 0;
+              height: 100%;
+              background: #fff;
+              padding-top: 100px;
+              width: 100%;
+              .close {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+              }
+              input[type=text],
+              input[type=email] {
+                padding-bottom: 10px;
+                width: 100%;
+                font-size: $font-size-12;
+              }
+
+              .wpcf7-form-control-wrap {
+                &.your-email {
+                  padding: 0 10px;
+                  float: right;
+                  width: 50%;
+                  input {
+                    width: 100%;
+                  }
+                }
+                &.your-name {
+                  padding: 0 10px;
+                  float: right;
+                  width: 50%;
+                  input {
+                    width: 100%;
+                  }
+                }
+                &.your-message {
+                  textarea {
+                    padding: 50px 15px 15px 15px;
+                    height: 250px;
+                    font-size: $font-size-12;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    h2 {
+      color: $text-color;
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-20;
+      }
+      &:after {
+        background-color: $background-aktive;
+        width: 100%;
+      }
+    }
+    .email-link {
+      @media only screen and (max-width: $screen-md)
+      {
+        margin-top: 35px;
+        a {
+          &:hover {
+            svg {
+              fill: $background-aktive;
+            }
+          }
+        }
+       svg {
+         width:  30px;
+         height: 30px;
+         fill: $background-aktive;
+       }
+      }
+    }
+    .info-cell {
+      position: relative;
+      margin-top: 35px;
+      padding-left: 50px;
+      color: $text-color;
+      font-weight: $font-medium;
+      font-size: $font-size-16;
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-14;
+        margin-top: 26px;
+      }
+      &.address {
+        max-width: 490px;
+      }
+      svg {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        @media only screen and (max-width: $screen-md) {
+          width: 15px;
+          height: 20px;
+        }
+      }
+      &:hover {
+        font-weight: $font-bold;
+        svg {
+          fill: $background-aktive;
+          stroke: $background-aktive
+        }
+      }
+    }
+
+  }
+  .email-form {
+    @include transform-all;
+    display: block;
+    position: relative;
+    width: 638px;
+    height: 319px;
+    margin-top: 35px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 5px 30px #00000029;
+    padding: 20px;
+    opacity: 1;
+
+    .wpcf7-form-control-wrap {
+      &.your-email {
+        float: right;
+      }
+    }
+
+    input[type=text],
+    input[type=email] {
+      padding-bottom: 10px;
+      width: 230px;
+    }
+
+    textarea {
+      height: 125px;
+      width: 100%;
+      padding-top: 15px;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1px solid $color-main-05;
+      padding-left: 0;
+
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $text-color;
+        font-weight: $font-regular;
+        opacity: 0.5; /* Firefox */
+      }
+
+      &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $text-color;
+        font-weight: $font-regular;
+        opacity: 0.5;
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $text-color;
+        font-weight: $font-regular;
+        opacity: 0.5;
+      }
+
+
+    }
+
+    input[type=submit] {
+      position: absolute;
+      bottom: 26px;
+      right: 17px;
+    }
+  }
+}

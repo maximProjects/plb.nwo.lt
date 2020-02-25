@@ -1,0 +1,181 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Vadim
+ * Date: 2015-09-03
+ * Time: 09:30
+ */
+
+use PluginName\Singleton;
+
+abstract class SIM_Base extends Singleton
+{
+
+    protected $id;
+
+    protected static $post_type;
+
+    /**
+     * @param $property
+     * @return bool|mixed
+     * Getter for dynamic parameters
+     */
+    public function __get($property)
+    {
+        if (property_exists($this, $property)) {
+            return $this->get_meta_value('_sim_'.$property);
+        }
+    }
+
+    /**
+     * @param $property
+     * @param $value
+     * @return $this
+     * Setter for dynamic parameters
+     */
+    public function __set($property, $value) {
+        if (property_exists($this, $property)) {
+            $this->$property = $value;
+        }
+
+        return $this;
+    }
+
+
+    /**
+     * @param $param
+     * @return bool|mixed
+     * Getting object meta for key
+     */
+    public function get_meta_value($param, $single = true)
+    {
+        if($param)
+        {
+            return get_post_meta($this->id, $param, $single);
+        }
+        return false;
+    }
+
+
+    /**
+     * @param $key
+     * @param $value
+     * @return bool|int
+     * Saving object meta for key
+     */
+    public function save_meta_value($key, $value, $unique = true)
+    {
+        if($key && $value)
+        {
+
+            if(is_array($value))
+            {
+                //Cleaning meta for key
+                delete_post_meta($this->id, $key);
+
+                foreach ($value as $val) {
+                    add_post_meta($this->id, $key, $val, $unique);
+                }
+            }else{
+
+                return update_post_meta($this->id, $key, $value);
+            }
+        }
+        return false;
+    }
+
+
+
+
+    public static function translate_to_class_object(WP_Post &$post)
+    {
+        $post =  self::getById($post->ID);
+//        debugvar($post);
+    }
+
+    /**
+     * @param $key
+     * @return bool
+     * Deleting object meta by key
+     */
+    public function delete_meta_key($key)
+    {
+        $param = '_sim_'.$key;
+
+        return delete_post_meta($this->id, $param);
+    }
+
+
+    /**
+     * Saving Room parameters to meta
+     */
+    abstract public function save();
+
+    /**
+     * Initializing object parameters from meta
+     */
+    abstract public function init();
+
+
+    /**
+     * Getting list of class objects categorised by taxonomy
+     */
+    abstract public function get_list_categorised($taxonomy);
+
+
+    /**
+     * @return mixed
+     * Getting list of class objects
+     */
+    public static function get_list(){
+
+        $args = array(
+            'post_type' => self::$post_type,
+            'posts_per_page' => '-1'
+        );
+
+        $posts = get_posts($args);
+
+        array_walk($posts, function(&$post){
+
+            $post =  self::getById($post->ID);
+        });
+
+        return $posts;
+    }
+
+
+    /**
+     * @return mixed
+     * Getting list of class objects
+     */
+    public static function get_list_args($args)
+    {
+        $args_def = array(
+            'post_type' => self::$post_type,
+            'posts_per_page' => '-1'
+        );
+
+        $args = array_merge($args_def, $args);
+
+        $posts = get_posts($args);
+
+        array_walk($posts, function(&$post){
+
+            $post =  self::getById($post->ID);
+        });
+
+        return $posts;
+    }
+
+
+    /**
+     * Getting current class post_type
+     */
+    public static function get_class_post_type(){
+
+        return self::post_type;
+    }
+
+
+}

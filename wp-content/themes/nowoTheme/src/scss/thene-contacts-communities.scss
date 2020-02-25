@@ -1,0 +1,106 @@
+.community-contacts {
+  max-width: 1700px;
+  width: 1700px;
+  margin-top: 65px;
+  margin-bottom: 30px;
+  @media only screen and (max-width: $screen-md) {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 30px;
+  }
+  h1 {
+    margin-bottom: 0px;
+    @media only screen and (max-width: $screen-md) {
+      font-size: $font-size-20;
+    }
+  }
+  .cats-menu {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @media only screen and (max-width: $screen-md) {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      .cats-box {
+        overflow: hidden;
+        height: 30px;
+        max-height: 30px;
+      }
+
+      .cats-scroll {
+        width: 100%;
+        max-width: 100%;
+        overflow: auto;
+      }
+
+      .cats-line {
+        width: 1000px;
+        height: 40px;
+      }
+    }
+    a {
+      margin: 0 35px;
+      font-size: $font-size-16;
+      font-weight: $font-regular;
+      opacity: 0.5;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover,
+      &.active {
+        font-weight: $font-bold;
+        opacity: 1;
+      }
+    }
+  }
+  .info-box {
+    margin: 0 auto 30px auto;
+    width: 400px;
+    height: 200px;
+    padding-top: 20px;
+    @media only screen and (max-width: $screen-md) {
+      width: 100%;
+    }
+    h2 {
+      color: $text-color;
+      font-size: $font-size-24;
+      font-weight: $font-medium;
+      width: 100%;
+      &:after {
+        display: block;
+        position: relative;
+        margin: 2px auto 0 auto;
+        content: "";
+        height: 1px;
+        width: 85px;
+        background-color: $background-aktive;
+      }
+    }
+    a {
+      &:hover {
+        color: $background-aktive;
+        svg {
+          fill: $background-aktive;
+          stroke: $background-aktive;
+        }
+      }
+    }
+    .web {
+      height: 30px;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    .contact-person {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    .email {
+      svg {
+        fill: $text-color;
+        stroke: $text-color;
+        max-width: 20px;
+        max-height: 20px;
+      }
+    }
+  }
+}

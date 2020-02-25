@@ -1,0 +1,202 @@
+.filter {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  .sub-box .sub-menu {
+    background-color: #fff;
+    border-left: 1px solid $background-aktive;
+    border-bottom: 1px solid $background-aktive;
+    a:active {
+      color: $text-color;
+      background-color: #fff;
+    }
+  }
+  .navbar {
+    padding-right: 0;
+    padding-left: 0;
+    .sub-menu {
+      background-color: #fff;
+      border-left: 1px solid $background-aktive;
+      border-bottom: 1px solid $background-aktive;
+
+      a {
+        &:hover {
+          color: $text-color;
+          background-color: #fff !important;
+        }
+        &.active {
+          color: $text-color;
+          background-color: #fff !important;
+        }
+        &:active {
+          color: $text-color;
+          background-color: #fff !important;
+        }
+
+      }
+      @media only screen and (max-width: $screen-md) {
+        display: none !important;
+      }
+    }
+    @media only screen and (max-width: $screen-md) {
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: $background-color;
+        bottom: 2px;
+        opacity: 1;
+        z-index: 100;
+      }
+    }
+    #navbarFilter {
+      @media only screen and (max-width: $screen-md) {
+        width: 100%;
+        overflow: auto;
+      }
+
+    }
+    ul {
+      @media only screen and (max-width: $screen-md) {
+        display: block;
+        width: 2000px !important;
+      }
+
+
+      li {
+        @media only screen and (max-width: $screen-md) {
+          display: inline-block;
+          margin-right: 30px;
+        }
+        &:first-child {
+          text-align: left;
+          a {
+            padding-left: 0;
+            @media only screen and (max-width: $screen-md) {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .search-box {
+    @media only screen and (max-width: $screen-md) {
+      position: absolute;
+      top: -101px;
+      right: 16px;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+  }
+
+
+    input[type = text] {
+      width: 427px;
+      border: 1px solid #707070;
+      border-radius: 29px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      padding-right: 145px;
+      background-color: $background-color;
+      @media only screen and (max-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    svg {
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      right: 52px;
+      top: 11px;
+      @media only screen and (max-width: $screen-md) {
+          top: 0;
+          right: 0;
+      }
+    }
+  }
+
+}
+
+.news-box {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 90px;
+  @media only screen and (max-width: $screen-md) {
+    margin-bottom: 40px;
+  }
+
+    a {
+      text-decoration: none;
+      //color: $text-color;
+    }
+
+
+    .news-image {
+      //width: 50%;
+      //float: left;
+      padding-right: 15px;
+      img {
+        width: 820px;
+        max-width: 820px;
+      }
+      @media only screen and (max-width: $screen-md) {
+        padding-right: 0px;
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+    }
+    .news-content {
+      //width: 50%;
+      //float: right;
+      position: relative;
+      padding-right: $padding-15;
+      padding-left: $padding-15;
+      @media only screen and (max-width: $screen-md) {
+        padding-top: 50px;
+      }
+      h3 {
+        display: block;
+      }
+      p {
+        @media only screen and (max-width: $screen-md) {
+          display: none;
+        }
+      }
+      .icons {
+        margin: 15px 0;
+        @media only screen and (max-width: $screen-md) {
+          position: absolute;
+          top: 0;
+          margin: 10px 0;
+        }
+        .calendar {
+          margin-right: 5px;
+          font-weight: 400;
+          svg {
+            margin-top: -1px;
+          }
+        }
+        .eye {
+          margin-right: 5px;
+          font-weight: 400;
+          margin-left: 15px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+
+    }
+
+
+}

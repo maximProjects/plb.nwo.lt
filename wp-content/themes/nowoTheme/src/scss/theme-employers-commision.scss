@@ -1,0 +1,212 @@
+.employeers {
+  position: relative;
+  margin-top: $section-margin-top;
+  margin-bottom: 0px;
+  width: 1325px;
+
+  @media only screen and (max-width: $screen-md) {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 35px;
+  }
+  .block {
+    margin-bottom: 130px;
+    @media only screen and (max-width: $screen-md) {
+      margin-bottom: 35px;
+    }
+    img {
+      margin-right: 130px;
+      @media only screen and (max-width: $screen-md) {
+        width: 130px;
+        max-width: 130px;
+        margin-right: 0px;
+      }
+    }
+
+    .employee-info {
+      position: relative;
+      @media only screen and (max-width: $screen-md) {
+        padding-left: 15px;
+      }
+    &.active {
+      .email-form {
+        opacity: 1;
+        @media only screen and (max-width: $screen-md) {
+          display: block;
+        }
+      }
+      .email-link {
+        svg {
+          fill: $background-aktive;
+          stroke: $background-aktive;
+        }
+      }
+    }
+
+    h2 {
+      display: inline-block;
+      font-weight: $font-medium;
+      color: $text-color;
+      font-size: $font-size-24;
+      margin-bottom: 24px;
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-16;
+        margin-bottom: 5px;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: -2px;
+        background-color: $background-aktive;
+      }
+    }
+
+    .email-link {
+      margin-top: 12px;
+
+      svg {
+        @include transform-all;
+        width: 28px;
+        height: 27px;
+        fill: $text-color;
+        stroke: $text-color;
+      }
+
+      &:hover {
+        svg {
+          fill: $background-aktive;
+          stroke: $background-aktive;
+        }
+      }
+    }
+
+
+    .email-form {
+      @include transform-all;
+      display: block;
+      @media only screen and (max-width: $screen-md) {
+        display: none;
+        position: fixed;
+        top: 0px;
+        z-index: 99999;
+        left: 0;
+        height: 100%;
+        background: #fff;
+        padding-top: 100px;
+        width: 100%;
+        .close {
+          position: absolute;
+          top: 5px;
+          right: 15px;
+        }
+        input[type=text],
+        input[type=email] {
+          padding-bottom: 10px;
+          width: 100%;
+          font-size: $font-size-12;
+        }
+
+               .wpcf7-form-control-wrap {
+                 &.your-email {
+                   padding: 0 10px;
+                   float: right;
+                   width: 50%;
+                   input {
+                     width: 100%;
+                   }
+                 }
+                 &.your-name {
+                   padding: 0 10px;
+                   float: right;
+                   width: 50%;
+                   input {
+                     width: 100%;
+                   }
+                 }
+                 &.your-message {
+                   textarea {
+                     padding: 50px 15px 15px 15px;
+                     height: 250px;
+                     font-size: $font-size-12;
+                   }
+                 }
+               }
+             }
+
+             position: absolute;
+             bottom: 0px;
+             left: 0px;
+             width: 811px;
+             height: 266px;
+             background: #FFFFFF 0% 0% no-repeat padding-box;
+             box-shadow: 3px 5px 30px #00000029;
+             padding: 20px;
+             opacity: 0;
+
+             .wpcf7-form-control-wrap {
+               &.your-email {
+                 float: right;
+               }
+             }
+
+             input[type=text],
+             input[type=email] {
+               padding-bottom: 10px;
+               width: 230px;
+             }
+
+             textarea {
+               height: 125px;
+               width: 100%;
+               padding-top: 15px;
+             }
+
+             input[type=text],
+             input[type=email],
+             textarea {
+               border-top: none;
+               border-right: none;
+               border-left: none;
+               border-bottom: 1px solid $color-main-05;
+               padding-left: 0;
+
+               &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: $text-color;
+          font-weight: $font-regular;
+          opacity: 0.5; /* Firefox */
+        }
+
+        &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: $text-color;
+          font-weight: $font-regular;
+          opacity: 0.5;
+        }
+
+        &::-ms-input-placeholder { /* Microsoft Edge */
+          color: $text-color;
+          font-weight: $font-regular;
+          opacity: 0.5;
+        }
+
+
+      }
+
+      input[type=submit] {
+        position: absolute;
+        bottom: 26px;
+        right: 17px;
+        @media only screen and (max-width: $screen-md) {
+          float: right;
+          position: relative;
+          bottom: unset;
+          right: unset;
+        }
+      }
+    }
+  }
+}
+}

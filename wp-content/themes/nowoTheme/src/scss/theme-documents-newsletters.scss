@@ -1,0 +1,96 @@
+.documents-constitution {
+  &.newsletters {
+    padding-bottom: 120px;
+    h1 {
+      margin-bottom: 0px;
+    }
+    .cats-menu {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      @media only screen and (max-width: $screen-md) {
+        margin-top: 35px;
+        margin-bottom: 40px;
+        .cats-box {
+          overflow: hidden;
+          height: 30px;
+          max-height: 30px;
+        }
+
+        .cats-scroll {
+            width: 100%;
+            max-width: 100%;
+            overflow: auto;
+        }
+
+        .cats-line {
+          width: 1000px;
+          height: 40px;
+        }
+
+      }
+      a {
+        margin: 0 35px;
+        font-size: $font-size-16;
+        font-weight: $font-regular;
+        opacity: 0.5;
+        @media only screen and (max-width: $screen-md) {
+          margin: 0 20px;
+          font-size: $font-size-14;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover,
+        &.active {
+          font-weight: $font-bold;
+          opacity: 1;
+        }
+      }
+    }
+    .descr {
+      font-size: $font-size-14;
+      color: $text-color;
+      font-weight: $font-regular;
+      margin-bottom: 40px;
+      &::after {
+        display: none;
+      }
+    }
+    .docs {
+      .block {
+        @media only screen and (max-width: $screen-md) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+    .block {
+      margin-bottom: 40px;
+      font-size: $font-size-20;
+      .title {
+        display: block;
+        margin-bottom: 15px;
+        text-transform: none;
+        color: $text-color;
+        font-weight: $font-medium;
+        font-size: $font-size-42;
+
+      }
+      .download {
+        @media only screen and (max-width: $screen-md) {
+          padding: 4px 20px 4px 20px;
+          width: 100%;
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .download {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      display: inline-block;
+    }
+  }
+}

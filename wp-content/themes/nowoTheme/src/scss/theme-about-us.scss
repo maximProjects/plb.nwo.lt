@@ -1,0 +1,138 @@
+.about-us {
+  &.header {
+    width: 1044px;
+    height: 775px;
+    overflow: hidden;
+    margin-top: 235px;
+    @media only screen and (max-width: $screen-md) {
+      margin-top: 70px;
+      height: auto;
+      margin-bottom: 100px;
+    }
+    .content {
+      position: relative;
+      width: 290px;
+      margin: 0 auto;
+      z-index: 10;
+      @media only screen and (max-width: $screen-md) {
+        width: 208px;
+        overflow: hidden;
+        text-align: center;
+      }
+      h1 {
+        padding-bottom: 0;
+        margin-bottom: 30px;
+        @media only screen and (max-width: $screen-md) {
+          width: 156px;
+          text-align: right;
+        }
+        &::after {
+          background-color: $background-aktive;
+        }
+      }
+      img {
+        @media only screen and (max-width: $screen-md) {
+          margin-top: 0;
+          padding: 0;
+          background: transparent;
+        }
+      }
+      .mobile-text {
+        @media only screen and (max-width: $screen-md) {
+          text-align: left;
+          width: 154px;
+          margin: 22px auto 0 auto;
+        }
+      }
+    }
+  }
+
+
+
+  img {
+    padding: 10px;
+    background: #fff;
+    margin-top: 40px;
+  }
+}
+.background-book {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  min-height: 1000px;
+  overflow: hidden;
+  text-align: center;
+  background-image: url("../../img/about_plb.svg");
+  background-position-x: center;
+  background-position-y: 70px;
+  opacity: 0.3;
+  z-index: 10;
+  background-repeat: no-repeat;
+  svg {
+    position: absolute;
+    top: 0;
+    left: -4%;
+  }
+  @media only screen and (max-width: $screen-md) {
+    background-image: url("../../img/book_mobile.svg");
+    background-position-y: -70px;
+    z-index: 99;
+  }
+}
+.about-us-blocks {
+  margin-bottom: 130px;
+  @media only screen and (max-width: $screen-md) {
+    .text-right {
+      //text-align: left !important;
+    }
+  }
+  p {
+    @media only screen and (max-width: $screen-md) {
+      margin-top: 30px;
+    }
+  }
+  .without-image {
+    p {
+      max-width: 980px;
+      margin-top: 83px;
+      margin-bottom: 60px;
+      @media only screen and (max-width: $screen-md) {
+        margin-top: 30px;
+      }
+    }
+  }
+  img {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 5px 3px 30px #07358F29;
+    opacity: 1;
+    padding: 10px;
+  }
+  h2 {
+    display: inline-block;
+    font-size: 42px;
+    color: $text-color;
+    font-weight: $font-medium;
+    margin-bottom: 19px;
+    @media only screen and (max-width: $screen-md) {
+      font-size: $font-size-28;
+    }
+    &::after {
+      content: "";
+      background: $text-color;
+      width: 1500px;
+      height: 1px;
+      position: absolute;
+      display: block;
+      bottom: -18px;
+      right: 1px;
+    }
+  }
+  .text-right {
+    h2 {
+      &::after {
+        left: 1px;
+      }
+    }
+  }
+
+}

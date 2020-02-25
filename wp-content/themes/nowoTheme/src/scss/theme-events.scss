@@ -1,0 +1,273 @@
+.events {
+  margin-top: $section-margin-top;
+  margin-bottom: $section-margin-bottom;
+  max-width: 1430px;
+  @media only screen and (max-width: $screen-md) {
+    margin-top: 0px;
+    .calendar-content {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .main-news-box {
+    padding: 15px;
+    opacity: 1;
+    min-height: 682px;
+    filter: blur(0);
+    @media only screen and (max-width: $screen-md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .title {
+      display: block;
+      font-size: $font-size-24;
+      font-weight: $font-medium;
+      height: 102px;
+      overflow: hidden;
+      //@media only screen and (max-width: $screen-md) {
+      //  font-size: $font-size-16;
+      //  height: 65px;
+      //}
+    }
+    .date {
+      font-size: $font-size-14;
+      margin-bottom: 0;
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-12;
+      }
+    }
+    .content {
+      position: relative;
+      font-size: 18px;
+      text-align: left;
+
+    }
+    .banner-bottom {
+      position: absolute;
+      width: 100%;
+      bottom: 45px;
+      .views {
+        width: 50%;
+        float: right;
+        text-align: right;
+        padding-right: 30px;
+        margin-top: 5px;
+
+      }
+    }
+  }
+
+    .news-vertical-box {
+      padding: 26px 15px 15px 26px;;
+      margin-bottom: 30px;
+      margin-left: 50px;
+      width: 532px;
+      height: 215px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      opacity: 1;
+      filter: blur(0);
+      cursor: pointer;
+      @media only screen and (max-width: $screen-md) {
+        padding: 15px 15px 15px 15px;
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+        .project-content {
+          width: 100%;
+          padding: 0px;
+          margin: 0px auto 0px auto;
+          h2 {
+            text-align: center;
+            font-size: $font-size-18;
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+          .article-content {
+            p {
+              font-size: $font-size-14;
+            }
+          }
+          .pre-post {
+            margin-bottom: 15px;
+            .first-text {
+              font-size: $font-size-14;
+              line-height: 22px;
+              font-weight: $font-medium;
+              margin-top: 10px;
+            }
+
+            .txt {
+              font-size: $font-size-14;
+              margin-bottom: 0px;
+            }
+          }
+
+        }
+      }
+      &:hover,
+      &.active {
+        box-shadow: 5px 3px 30px #07358F29;
+        opacity: 1;
+        filter: blur(0);
+      }
+      .thmb {
+        //position: relative;
+        //width: 50%;
+        //float: left;
+        //text-align: left;
+        img {
+          width: 165px;
+          max-width: 165px;
+          @media only screen and (max-width: $screen-md) {
+            width: 116px;
+            max-width: 116px;
+          }
+        }
+      }
+      .content {
+        padding-left: 20px;
+        position: relative;
+        .title {
+          display: block;
+          font-weight: $font-medium;
+          font-size: $font-size-22;
+          height: 100px;
+          @media only screen and (max-width: $screen-md) {
+            font-size: $font-size-16;
+            height: 79px;
+          }
+        }
+        .banner-bottom {
+          position: absolute;
+          width: 100%;
+          bottom: -15px;
+          .views {
+            padding-right: $padding-15;
+          }
+        }
+      }
+    }
+
+  .calculator-box {
+    position: relative;
+    width: 50%;
+    float: left;
+    @media only screen and (max-width: $screen-md) {
+      width: 100%;
+      float: none;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .events-lists {
+    position: relative;
+    width: 640px;
+    float: right;
+    margin-left: 50px;
+    @media only screen and (max-width: $screen-md) {
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      height: auto;
+      max-height: unset;
+    }
+    overflow: hidden;
+
+    .events-box {
+      height: 715px;
+      max-height: 715px;
+      overflow: hidden;
+      padding-left: 0px;
+      @media only screen and (max-width: $screen-md) {
+        margin-left: 0;
+        height: auto;
+        max-height: unset;
+      }
+    }
+    h2 {
+      margin-left: 65px;
+      font-weight: $font-medium;
+      font-size: $font-size-20;
+      color: $text-color;
+      margin-top: 27px;
+      margin-bottom: 50px;
+      @media only screen and (max-width: $screen-md) {
+        display: none;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .project-content {
+    width: 1287px;
+    padding: 80px;
+    margin: 80px auto 80px auto;
+    .pre-content {
+      max-width: 665px;
+      h2 {
+        display: block;
+      }
+    }
+      h2 {
+        font-size: $font-size-24;
+        font-weight: $font-medium;
+        color: $text-color;
+      }
+
+    .pre-post {
+      margin-bottom: 80px;
+      .post-excerpt {
+        font-size: $font-size-22;
+        font-weight: $font-medium;
+        color: $text-color;
+        margin-bottom: 10px;
+      }
+      .first-text {
+        font-size: $font-size-20;
+        font-weight: $font-regular;
+        color: $text-color;
+        line-height: 28px;
+      }
+      .txt {
+        font-size: $font-size-16;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+    }
+  }
+
+
+}
+// scroll
+#ascrail2000 {
+  background-color: $color-main-05;
+  width: 1px !important;
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 18px;
+    width: 20px;
+    z-index: 5;
+    cursor: pointer;
+    background-color: $background-color;
+  }
+  &:before {
+       top: 0px;
+       left: -9px;
+       background-image: url(../../img/scroll_top.svg);
+       background-repeat: no-repeat;
+      background-position: top center;
+     }
+  &:after {
+    bottom: 0px;
+    left: -9px;
+    background-image: url(../../img/scroll_down.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  .nicescroll-cursors {
+    left: 2px !important;
+  }
+}

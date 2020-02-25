@@ -1,0 +1,139 @@
+.container {
+  &.news {
+    margin-top: 90px;
+    @media only screen and (max-width: $screen-md) {
+      margin-top: 0px;
+    }
+    .main-news-box {
+      padding: 15px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 5px 3px 30px #07358F29;
+      opacity: 1;
+      min-height: 682px;
+      filter: blur(undefined);
+      @media only screen and (max-width: $screen-md) {
+        min-height: auto;
+        padding: 10px;
+      }
+      .title {
+        display: block;
+        margin-top: $margin-15;
+        font-size: $font-size-26;
+        font-weight: $font-medium;
+        @media only screen and (max-width: $screen-md) {
+          font-size: $font-size-18;
+          text-align: center;
+        }
+      }
+      .date {
+        font-size: $font-size-15;
+        margin-bottom: $margin-15;
+        @media only screen and (max-width: $screen-md) {
+          text-align: center;
+          font-size: $font-size-12;
+        }
+      }
+      .content {
+        position: relative;
+        width: 758px;
+        margin: 15px auto;
+        font-size: 18px;
+        text-align: left;
+        padding-bottom: 30px;
+        @media only screen and (max-width: $screen-md) {
+          //width: 100%;
+          padding-bottom: 0;
+          &.main-new {
+            width: 100%;
+          }
+
+        }
+      }
+      .banner-bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 45px;
+        @media only screen and (max-width: $screen-md) {
+          bottom: 0px;
+        }
+        .views {
+          width: 50%;
+          float: right;
+          text-align: right;
+          padding-right: 30px;
+          margin-top: 5px;
+
+        }
+      }
+    }
+    .news-vertical-col {
+      padding-left: 60px;
+      @media only screen and (max-width: $screen-md) {
+        padding-left: 0px;
+        margin-top: 20px;
+      }
+      .news-vertical-box {
+        padding: $padding-15;
+        margin-bottom: 30px;
+        .thmb {
+          a {
+            @media only screen and (max-width: $screen-md) {
+              display: block;
+              width: 70px;
+              max-width: 70px;
+              overflow: hidden;
+              max-height: 103px;
+              img {
+                min-width: 157px;
+                margin-left: -41px;
+              }
+            }
+          }
+          //position: relative;
+          //width: 50%;
+          //float: left;
+          //text-align: left;
+        }
+        .content {
+          padding-left: 20px;
+          position: relative;
+          @media only screen and (max-width: $screen-md) {
+            .date {
+              display: inline-block;
+              position: absolute;
+              bottom: -10px;
+              right: 0;
+            }
+            .views {
+                display: none;
+              }
+
+          }
+          .title {
+            display: block;
+            width: 368px;
+            font-weight: $font-medium;
+            font-size: 22px;
+            margin-bottom: 5px;
+            @media only screen and (max-width: $screen-md) {
+              font-size: $font-size-16;
+              &.n-list {
+                width: auto;
+              }
+
+              //
+            }
+          }
+          .banner-bottom {
+            position: absolute;
+            width: 100%;
+            bottom: -15px;
+            .views {
+              padding-right: $padding-15;
+            }
+          }
+        }
+      }
+    }
+  }
+}

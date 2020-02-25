@@ -1,0 +1,47 @@
+.article {
+  h1 {
+    &.title {
+      &:after {
+        display: none;
+      }
+      margin-bottom: 0;
+      padding-bottom: 0;
+      margin-top: 15px;
+    }
+    @media only screen and (max-width: $screen-md) {
+      width: 100%;
+      text-align: left;
+      font-size: $font-size-18;
+    }
+  }
+  .category {
+    display: inline-block;
+    position: relative;
+    width: unset;
+    .line {
+      width: 100%;
+    }
+  }
+  .article-content {
+    @media only screen and (max-width: $screen-md) {
+      font-size: $font-size-14;
+    }
+
+
+    .first-text {
+      font-size: $font-size-20;
+      font-weight: $font-medium;
+      margin-bottom: 30px;
+      line-height: 26px;
+      @media only screen and (max-width: $screen-md) {
+        font-size: $font-size-14;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+}

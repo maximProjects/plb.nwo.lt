@@ -1,0 +1,33 @@
+.documents-constitution {
+
+  &.chatrija {
+    padding-bottom: 120px;
+    .bg {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      bottom: -41px;
+      text-align: center;
+    }
+
+    .descr {
+      font-size: $font-size-14;
+      color: $text-color;
+      font-weight: $font-regular;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .short-text {
+    position: absolute;
+    display: inline-block;
+    text-align: right;
+    right: 0;
+    bottom: 103px;
+    font-size: $font-size-14;
+    color: $text-color;
+    font-weight: $font-regular;
+  }
+}

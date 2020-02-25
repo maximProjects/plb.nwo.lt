@@ -1,0 +1,55 @@
+.project {
+  h1 {
+    @media only screen and (max-width: $screen-md) {
+      font-size: $font-size-18;
+    }
+  }
+  .project-content {
+    width: 1287px;
+    padding: 80px;
+    margin: 80px auto;
+    @media only screen and (max-width: $screen-md) {
+      width: 100%;
+      padding: 0px;
+      margin-top: 30px;
+    }
+
+    .article-content {
+      margin-bottom: 50px;
+      @media only screen and (max-width: $screen-md) {
+        p {
+          font-size: $font-size-14;
+        }
+      }
+    }
+    .pre-post {
+      margin-bottom: 80px;
+      @media only screen and (max-width: $screen-md) {
+        margin-bottom: 20px;
+        img {
+          margin-bottom: 20px;
+        }
+      }
+      .post-excerpt {
+        font-size: $font-size-22;
+        font-weight: $font-medium;
+        color: $text-color;
+        margin-bottom: 10px;
+        @media only screen and (max-width: $screen-md) {
+          font-size: $font-size-14;
+        }
+      }
+      .first-text {
+        font-size: $font-size-20;
+        font-weight: $font-regular;
+        color: $text-color;
+        line-height: 28px;
+        @media only screen and (max-width: $screen-md) {
+          font-size: $font-size-14;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+}

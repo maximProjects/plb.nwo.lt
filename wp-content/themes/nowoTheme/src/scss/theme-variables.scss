@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
+//xs: 0,
+//sm: 576px,
+//       md: 1200px,
+//               lg: 1300px,
+//                       xl: 1600px
+$screen-sm: 576px;
+$screen-md: 1200px;
+$screen-lg: 1200px;
+$screen-xl: 1600px;
+$font-family: 'Roboto', sans-serif;
+$font-medium: 500;
+$font-regular: 400;
+$font-bold: 700;
+$background-color: #F8F9FA;
+$background-aktive: #04D177;
+$section-margin-bottom: 65px;
+$section-margin-top: 65px;
+$section-margin-bottom-mobile: 35px;
+$section-margin-top-mobile: 35px;
+$background-dark: #E9E9E9;
+$text-black-color: #2F2A26;
+$color-danger:  #D90000;
+
+$text-color: #707070;
+
+$heading-color: #707070;
+
+$color-main: rgba(112, 112, 112, 1);
+
+$color-main-08: rgba(112, 112, 112, 0.8);
+
+$color-main-05: rgba(112, 112, 112, 0.5);
+
+$color-active-black: $text-color;
+
+$h1-letter-spacing: 1px;
+$h1-color: $heading-color;
+$h1-font-size: 42px;
+
+$h2-letter-spacing: 0.5px;
+$h2-color: #2F2A26;
+$h2-font-size: 28px;
+
+$h3-letter-spacing: 0.5px;
+$h3-color: $heading-color;
+$h3-font-size: 24px;
+
+$h4-color: $heading-color;
+$h4-font-size: 20px;
+
+$padding-15: 15px;
+$margin-15: 15px;
+
+$footer-bacground-color: #2F2A26;
+
+$font-size-small: 16px;
+
+$font-size-12: 12px;
+
+$font-size-14: 14px;
+
+$font-size-15: 15px;
+
+$font-size-16: 16px;
+
+$font-size-18: 18px;
+
+$font-size-20: 20px;
+
+$font-size-22: 22px;
+
+$font-size-24: 24px;
+
+$font-size-26: 26px;
+
+$font-size-28: 28px;
+
+$font-size-42: 42px;
+
+/* other ccolors */
+$color-yellow: #FFCD00;
+
+$color-form-error: #D90000;
+
+/* MIXINS */
+
+@mixin transform-all {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@mixin transform-opacity {
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+@mixin transform-height {
+  transition: height 0.5s ease-out;
+}
+
+@mixin transform-width {
+  transition: width 1s ease-out;
+}
+
+/* Break points */
+
+$width-loptop: 1700px
